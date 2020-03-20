@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 滚动 -->
+    <!-- <a href="#" v-scroll-to="'#element'">Scroll to #element</a> -->
+
+    <video-background
+      src="./video.mp4"
+      style="max-height: 100vw; height: 100vh;"
+    >
+      <a href="#" v-scroll-to="'#element'">Scroll to #element</a>
+    </video-background>
+    <div id="element">
+      Hi. I'm #element.
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {}
+};
 </script>
 
 <style>
 #app {
+  margin-top: 60px;
+
+  text-align: center;
+
+  color: #2c3e50;
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
