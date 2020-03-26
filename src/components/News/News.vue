@@ -6,16 +6,17 @@
 
 <template>
   <div class="news" id="news">
-    <swiper  class="news-swiper" ref="mySwiper" :options="swiperOptions">
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <div slot="button-prev" >ddddd</div>
-      <div slot="button-next" >ddddd</div>
-      <!-- <div class="swiper-pagination" slot="pagination"></div> -->
-    </swiper>
+    <div class="news-swiper__container">
+      <swiper class="news-swiper" ref="mySwiper" :options="swiperOptions">
+        <swiper-slide class="news-swiper__slide">Slide 1</swiper-slide>
+        <swiper-slide class="news-swiper__slide">Slide 2</swiper-slide>
+        <swiper-slide class="news-swiper__slide">Slide 3</swiper-slide>
+        <swiper-slide class="news-swiper__slide">Slide 4</swiper-slide>
+        <swiper-slide class="news-swiper__slide">Slide 5</swiper-slide>
+      </swiper>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
 </template>
 
@@ -25,10 +26,12 @@ export default {
   data() {
     return {
       swiperOptions: {
-        pagination: {
-          el: ".swiper-pagination"
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".news .swiper-button-next",
+          prevEl: ".news .swiper-button-prev"
         }
-        // Some Swiper option/callback...
       }
     };
   },
@@ -39,16 +42,26 @@ export default {
   },
   mounted() {
     console.log("Current Swiper instance object", this.swiper);
-    this.swiper.slideTo(3, 1000, false);
+    // this.swiper.slideTo(3, 1000, false);
   }
 };
 </script>
 
 <style>
 .news {
-    height: 600px;
+  height: 500px;
+}
+.news-swiper__container {
+  position: relative;
 }
 .news-swiper {
-    height: 500px;
+  margin: 0 auto;
+  width: 410px;
+  height: 200px;
+}
+.news-swiper__slide {
+  width: 200px;
+  height: 200px;
+  background: red;
 }
 </style>
