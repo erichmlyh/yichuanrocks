@@ -1,37 +1,25 @@
 <template>
   <div id="app">
-    <!-- 滚动 -->
-    <!-- <a href="#" v-scroll-to="'#element'">Scroll to #element</a> -->
-
-    <video-background
-      src="./video.mp4"
-      style="max-height: 100vw; height: 100vh;"
-    >
-      <a href="#" v-scroll-to="'#element'">Scroll to #element</a>
-    </video-background>
-    <div id="element">
-      Hi. I'm #element.
-    </div>
+    <Header></Header>
+    <Introduction></Introduction>
+    <News></News>
+    <Partners></Partners>
+    <Contact></Contact>
   </div>
 </template>
 
 <script>
+import Header from './components/Header'
+import Introduction from './components/Introduction'
+import News from './components/News'
+import Partners from './components/Partners'
+import Contact from './components/Contact'
+
 export default {
   name: "App",
-  components: {}
+  components: {Header,Introduction,News,Partners,Contact}
 };
 </script>
 
 <style>
-#app {
-
-  text-align: center;
-
-  color: #2c3e50;
-
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 </style>

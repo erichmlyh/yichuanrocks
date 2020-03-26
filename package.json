@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "swiper": "^5.3.6",
     "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.0.4",
     "vue-responsive-video-background-player": "^1.0.8",
     "vue-scrollto": "^2.17.1"
   },

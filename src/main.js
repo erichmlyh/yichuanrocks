@@ -1,11 +1,14 @@
 import Vue from "vue";
 import VueScrollTo from "vue-scrollto";
 import VideoBackground from "vue-responsive-video-background-player";
+import VueAwesomeSwiper from "vue-awesome-swiper";
 
-import App from './App.vue'
+import App from "./App.vue";
+
+import "swiper/css/swiper.css";
 import './reset.css'
 
-// You can also pass in the default options
+Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollTo, {
   container: "body",
   duration: 500,
