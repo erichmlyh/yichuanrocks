@@ -1,25 +1,41 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <Introduction></Introduction>
-    <News></News>
-    <Partners></Partners>
-    <Contact></Contact>
+    <Header :mobile="mobile"></Header>
+    <FullVideo :mobile="mobile"></FullVideo>
+    <Introduction :mobile="mobile"></Introduction>
+    <News :mobile="mobile"></News>
+    <Partners :mobile="mobile"></Partners>
+    <Contact :mobile="mobile"></Contact>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Introduction from './components/Introduction'
-import News from './components/News'
-import Partners from './components/Partners'
-import Contact from './components/Contact'
+import FullVideo from "./components/FullVideo";
+import Header from "./components/Header";
+import Introduction from "./components/Introduction";
+import News from "./components/News";
+import Partners from "./components/Partners";
+import Contact from "./components/Contact";
 
 export default {
   name: "App",
-  components: {Header,Introduction,News,Partners,Contact}
+  data() {
+    return {
+      mobile: true,
+    };
+  },
+  components: { Header, FullVideo, Introduction, News, Partners, Contact },
+  beforeCreate() {
+    window.addEventListener("resize", () => {
+      this.mobile = this.isXs();
+    });
+  },
+  methods: {
+    isXs() {
+      return document.documentElement.clientWidth < 768;
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

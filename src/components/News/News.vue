@@ -6,6 +6,7 @@
 
 <template>
   <div class="news" id="news">
+    <Title en="News" zh="川衣咨询"></Title>
     <div class="news-swiper__container">
       <swiper class="news-swiper" ref="mySwiper" :options="swiperOptions">
         <swiper-slide class="news-swiper__slide">Slide 1</swiper-slide>
@@ -21,6 +22,8 @@
 </template>
 
 <script>
+import Title from '../Title'
+
 export default {
   name: "News",
   data() {
@@ -34,6 +37,9 @@ export default {
         }
       }
     };
+  },
+  components: {
+    Title
   },
   computed: {
     swiper() {
@@ -55,13 +61,14 @@ export default {
   position: relative;
 }
 .news-swiper {
-  margin: 0 auto;
   width: 410px;
   height: 200px;
+  margin: 0 auto;
 }
 .news-swiper__slide {
   width: 200px;
   height: 200px;
+
   background: red;
 }
 </style>

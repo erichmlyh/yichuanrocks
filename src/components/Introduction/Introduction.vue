@@ -6,18 +6,22 @@
 
 <template>
   <div class="introduction" id="introduction">
-    introduction
+    <Title en="Introduction" zh="公司简介"></Title>
   </div>
 </template>
 
 <script>
+import Title from '../Title'
+
 export default {
   name: "Introduction",
   data() {
     return {};
   },
   props: {},
-  components: {},
+  components: {
+    Title
+  },
   mounted() {},
   methods: {}
 };
@@ -25,6 +29,5 @@ export default {
 
 <style>
 .introduction {
-  height: 500px;
 }
 </style>

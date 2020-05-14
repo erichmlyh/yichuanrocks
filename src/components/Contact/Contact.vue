@@ -6,18 +6,21 @@
 
 <template>
   <div class="contact" id="contact">
-    contact
+    <Title en="Contact us" zh="联系我们"></Title>
+    
   </div>
 </template>
 
 <script>
+import Title from '../Title'
+
 export default {
   name: "Contact",
   data() {
     return {};
   },
   props: {},
-  components: {},
+  components: {Title},
   mounted() {},
   methods: {}
 };

@@ -2,9 +2,11 @@ import Vue from "vue";
 import VueScrollTo from "vue-scrollto";
 import VideoBackground from "vue-responsive-video-background-player";
 import VueAwesomeSwiper from "vue-awesome-swiper";
+import { Row, Col } from "element-ui";
 
 import App from "./App.vue";
 
+import "element-ui/lib/theme-chalk/display.css";
 import "swiper/css/swiper.css";
 import './reset.css'
 
@@ -23,7 +25,8 @@ Vue.use(VueScrollTo, {
   y: true
 });
 Vue.component("video-background", VideoBackground);
-
+Vue.use(Row);
+Vue.use(Col);
 
 Vue.config.productionTip = false
 

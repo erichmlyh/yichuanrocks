@@ -6,6 +6,7 @@
 
 <template>
   <div class="partners" id="partners">
+    <Title en="Partners" zh="合作伙伴"></Title>
     <div class="partners-swiper__container">
       <swiper class="partners-swiper" ref="mySwiper" :options="swiperOptions">
         <swiper-slide class="partners-swiper__slide">Slide 1</swiper-slide>
@@ -21,6 +22,8 @@
 </template>
 
 <script>
+import Title from '../Title'
+
 export default {
   name: "Partners",
   data() {
@@ -35,7 +38,7 @@ export default {
     };
   },
   props: {},
-  components: {},
+  components: {Title},
   mounted() {},
   methods: {}
 };
@@ -50,19 +53,21 @@ export default {
   position: relative;
 }
 .partners-swiper {
-  margin: 0 auto;
   height: 200px;
+  margin: 0 auto;
 }
 .partners-swiper__slide {
   height: 200px;
+
   background: red;
 }
 .partners-next {
+    top: auto;
+    right: aut0;
+    bottom: -50%;
+    left: 50%;
+
     transform: rotateZ(90deg);
     transform-origin: center;
-    left: 50%;
-    right: aut0;
-    top: auto;
-    bottom: -50%;
 }
 </style>
