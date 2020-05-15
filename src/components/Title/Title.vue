@@ -23,21 +23,21 @@ export default {
 
 <style scoped lang="css">
 .title {
-  margin: 30px 0;
+  margin: 130px 0 30px 0;
 
   text-align: center;
 }
 .title_en {
   font-family: "HelveticaNeue";
-  font-size: 24px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 60px;
 }
 .title_zh {
   margin-top: 6px;
 
   font-family: "HelveticaNeue";
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 32px;
+  line-height: 32px;
 }
 </style>

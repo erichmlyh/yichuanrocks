@@ -6,6 +6,7 @@
     <News :mobile="mobile"></News>
     <Partners :mobile="mobile"></Partners>
     <Contact :mobile="mobile"></Contact>
+    <Footer :mobile="mobile"></Footer>
   </div>
 </template>
 
@@ -16,15 +17,24 @@ import Introduction from "./components/Introduction";
 import News from "./components/News";
 import Partners from "./components/Partners";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
   data() {
     return {
-      mobile: true,
+      mobile: this.isXs(),
     };
   },
-  components: { Header, FullVideo, Introduction, News, Partners, Contact },
+  components: {
+    Header,
+    FullVideo,
+    Introduction,
+    News,
+    Partners,
+    Contact,
+    Footer,
+  },
   beforeCreate() {
     window.addEventListener("resize", () => {
       this.mobile = this.isXs();

@@ -7,27 +7,53 @@
 <template>
   <div class="contact" id="contact">
     <Title en="Contact us" zh="联系我们"></Title>
-    
+    <ContactItem v-for="(item, index) in configs" :key="index" v-bind="item"></ContactItem>
   </div>
 </template>
 
 <script>
-import Title from '../Title'
+import Title from "../Title";
+import ContactItem from "./ContactItem";
+import location from "@/assets/location.png";
+import phone from "@/assets/phone.png";
+import email from "@/assets/email.png";
+import join from "@/assets/join.png";
 
 export default {
   name: "Contact",
   data() {
-    return {};
+    return {
+      configs: [
+        {
+          src: location,
+          name: "地址",
+          detail: "北京市朝阳区阜通东大街59号宜家办公楼401",
+        },
+        {
+          src: phone,
+          name: "商务合作请致电",
+          detail: "+86 18810476747",
+        },
+        {
+          src: email,
+          name: "邮箱",
+          detail: "market@yichuan.rocks",
+        },
+        {
+          src: join,
+          name: "加入我们请联系",
+          detail: "hr@yichuan.rocks",
+        },
+      ],
+    };
   },
   props: {},
-  components: {Title},
+  components: { Title, ContactItem },
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 
 <style>
-.contact {
-  height: 500px;
-}
+
 </style>

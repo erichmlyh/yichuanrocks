@@ -36,9 +36,29 @@ export default {
 </script>
 
 <style>
+.introduction {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+}
 .el-tabs__nav-scroll {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+}
+.el-tabs__content {
+  margin: 0 auto;
+  width: 70%;
+  font-size:14px;
+  line-height: 28px;
+}
+.introduction .el-tabs__item.is-active {
+  color: #a0a0a0;
+}
+.introduction .el-tabs__item:hover {
+  color: #a0a0a0;
+}
+.introduction .el-tabs__active-bar {
+  background-color: #000;
 }
 </style>
