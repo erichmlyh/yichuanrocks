@@ -73,8 +73,7 @@ export default {
   margin: 0 auto;
 }
 .news-swiper__slide {
-  width: 570px;
-  height: 400px;
+  height: auto !important;
 }
 .news-arrow {
   position: absolute;

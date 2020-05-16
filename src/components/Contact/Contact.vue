@@ -6,7 +6,7 @@
 
 <template>
   <div class="contact" id="contact">
-    <Title en="Contact us" zh="联系我们"></Title>
+    <Title :mobile="mobile" en="Contact us" zh="联系我们"></Title>
     <ContactItem v-for="(item, index) in configs" :key="index" v-bind="item"></ContactItem>
   </div>
 </template>
@@ -47,7 +47,9 @@ export default {
       ],
     };
   },
-  props: {},
+  props: {
+    mobile: Boolean
+  },
   components: { Title, ContactItem },
   mounted() {},
   methods: {},

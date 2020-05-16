@@ -6,7 +6,7 @@
 
 <template>
   <div class="introduction" id="introduction">
-    <Title en="Introduction" zh="公司简介"></Title>
+    <Title :mobile="mobile" en="Introduction" zh="公司简介"></Title>
     <el-tabs >
       <el-tab-pane label="衣川文化">
         衣川文化（北京）有限公司成立于2015年8月，是一家专注于男士文化、时尚、生活的传媒公司，也是行业领先的原创内容生产者。旗下有众多知名自媒体品牌，内容阅读量过亿，粉丝超过百万。公司成立以来，以新媒体为主导媒介，深耕男士文化领域，同时与众多知名品牌合作，打造了一系列拥有广泛传播的系列男性文化内容。
@@ -26,7 +26,9 @@ export default {
   data() {
     return {};
   },
-  props: {},
+  props: {
+    mobile: Boolean
+  },
   components: {
     Title,
   },
@@ -37,9 +39,9 @@ export default {
 
 <style>
 .introduction {
-  margin: 0 auto;
   width: 80%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 .el-tabs__nav-scroll {
   display: flex;
@@ -47,8 +49,9 @@ export default {
   justify-content: center;
 }
 .el-tabs__content {
-  margin: 0 auto;
   width: 70%;
+  margin: 0 auto;
+
   font-size:14px;
   line-height: 28px;
 }

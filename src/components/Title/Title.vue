@@ -5,9 +5,9 @@
  -->
 
 <template>
-  <div class="title">
-    <p class="title_en">{{ en }}</p>
-    <p class="title_zh">{{ zh }}</p>
+  <div class="title" :class="mobile ? 'title--mobile' : ''">
+    <p class="title__en">{{ en }}</p>
+    <p class="title__zh">{{ zh }}</p>
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
   props: {
     en: String,
     zh: String,
+    mobile: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -27,17 +31,29 @@ export default {
 
   text-align: center;
 }
-.title_en {
+.title__en {
   font-family: "HelveticaNeue";
   font-size: 60px;
   font-weight: bold;
   line-height: 60px;
 }
-.title_zh {
+.title__zh {
   margin-top: 6px;
 
   font-family: "HelveticaNeue";
   font-size: 32px;
   line-height: 32px;
+}
+.title--mobile {
+  margin: 60px 0 30px 0;
+}
+.title--mobile .title__en {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.title--mobile .title__zh {
+  font-size: 24px;
+  line-height: 24px;
 }
 </style>

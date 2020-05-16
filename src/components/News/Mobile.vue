@@ -6,25 +6,23 @@
 
 <template>
   <div class="news">
-    news
+    <Title :mobile="true" en="News" zh="川衣咨询"></Title>
   </div>
 </template>
 
 <script>
-export default {
- name: 'MobileNews',
-  data() {
-    return {
+import Title from "../Title";
 
-    }
+export default {
+  name: "MobileNews",
+  data() {
+    return {};
   },
   props: {},
-  components: {},
+  components: { Title },
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

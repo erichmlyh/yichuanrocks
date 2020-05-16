@@ -6,25 +6,28 @@
 
 <template>
   <div class="partners">
-    partners
+    <Title
+      class="partners-title"
+      :mobile="true"
+      en="Partners"
+      zh="合作伙伴"
+    ></Title>
   </div>
 </template>
 
 <script>
-export default {
- name: 'Mobile',
-  data() {
-    return {
+import Title from "../Title";
 
-    }
+export default {
+  name: "Mobile",
+  data() {
+    return {};
   },
   props: {},
-  components: {},
+  components: { Title },
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
