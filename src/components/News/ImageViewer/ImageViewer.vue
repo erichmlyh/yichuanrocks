@@ -8,9 +8,9 @@
     >
       <div class="el-image-viewer__mask" @click="hide"></div>
       <!-- CLOSE -->
-      <!-- <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
+      <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
         <i class="el-icon-circle-close"></i>
-      </span> -->
+      </span>
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
@@ -317,3 +317,9 @@ export default {
   },
 };
 </script>
+
+<style lang="css">
+    .el-icon-circle-close:before {
+        color:#fff;
+    }
+</style>
