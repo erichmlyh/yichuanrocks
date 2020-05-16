@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueScrollTo from "vue-scrollto";
 import VideoBackground from "vue-responsive-video-background-player";
 import VueAwesomeSwiper from "vue-awesome-swiper";
-import { Row, Col, Tabs, TabPane, Image } from "element-ui";
+import DomPortal from "vue-dom-portal";
+import { Row, Col, Tabs, TabPane, Image, Card } from "element-ui";
 
 import App from "./App.vue";
 
@@ -26,11 +27,13 @@ Vue.use(VueScrollTo, {
   y: true
 });
 Vue.component("video-background", VideoBackground);
+Vue.use(DomPortal);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Tabs);
 Vue.use(TabPane);
 Vue.use(Image);
+Vue.use(Card);
 
 Vue.config.productionTip = false
 

@@ -9,41 +9,13 @@
     <Title en="News" zh="川衣咨询"></Title>
     <div class="news-swiper__container">
       <swiper class="news-swiper" ref="mySwiper" :options="swiperOptions">
-        <swiper-slide class="news-swiper__slide">
-          <el-image
-            style="width:100%;height: 100%"
-            :src="configs[0].src"
-            :fit="cover"
-          ></el-image>
+        <swiper-slide
+          class="news-swiper__slide"
+          v-for="(item, index) in configs"
+          :key="index"
+        >
+          <Item v-bind="item"></Item>
         </swiper-slide>
-        <swiper-slide class="news-swiper__slide"
-          ><el-image
-            style="width:100%;height: 100%"
-            :src="configs[0].src"
-            :fit="cover"
-          ></el-image
-        ></swiper-slide>
-        <swiper-slide class="news-swiper__slide"
-          ><el-image
-            style="width:100%;height: 100%"
-            :src="configs[0].src"
-            :fit="cover"
-          ></el-image
-        ></swiper-slide>
-        <swiper-slide class="news-swiper__slide"
-          ><el-image
-            style="width:100%;height: 100%"
-            :src="configs[0].src"
-            :fit="cover"
-          ></el-image
-        ></swiper-slide>
-        <swiper-slide class="news-swiper__slide"
-          ><el-image
-            style="width:100%;height: 100%"
-            :src="configs[0].src"
-            :fit="cover"
-          ></el-image
-        ></swiper-slide>
       </swiper>
       <div class="news-arrow news-pre"></div>
       <div class="news-arrow news-next"></div>
@@ -52,18 +24,16 @@
 </template>
 
 <script>
+import Item from "./components/PcItem";
 import Title from "../Title";
-import news from "./imgs/news.jpg";
+
+import configs from './configs'
 
 export default {
   name: "News",
   data() {
     return {
-      configs: [
-        {
-          src: news,
-        },
-      ],
+      configs,
       swiperOptions: {
         slidesPerView: 2,
         spaceBetween: 10,
@@ -76,42 +46,45 @@ export default {
   },
   components: {
     Title,
+    Item,
   },
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
     },
   },
-  mounted() {
-    console.log("Current Swiper instance object", this.swiper);
-    // this.swiper.slideTo(3, 1000, false);
-  },
+  // mounted() {
+  //   console.log("Current Swiper instance object", this.swiper);
+  //   // this.swiper.slideTo(3, 1000, false);
+  // },
 };
 </script>
 
 <style>
 .news-swiper__container {
   position: relative;
+
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
 .news-swiper {
   width: calc(100% - 50px);
-  height: 600px;
   margin: 0 auto;
 }
 .news-swiper__slide {
   width: 570px;
-  height: 570px;
+  height: 400px;
 }
 .news-arrow {
   position: absolute;
+  z-index: 10;
   top: 50%;
+
   width: 20px;
   height: 32px;
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
-  z-index: 10;
+
   cursor: pointer;
 }
 .news-pre {
@@ -122,6 +95,7 @@ export default {
 }
 .news-next {
   right: 0;
+
   background: url("../../assets/right-arrow.png") 100%/100%;
 }
 .news-next.swiper-button-disabled {

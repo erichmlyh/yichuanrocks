@@ -52,20 +52,23 @@ export default {
 <style scoped lang="css">
 .header {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 10000;
 
   display: flex;
+  align-items: center;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
+
+  width: 100%;
+  height: 80px;
 }
 .header__ancher {
-  font-size: 14px;
   color: #fff;
+
+  font-size: 14px;
+
   text-decoration-line: none;
 }
 .header__ancher + .header__ancher {
