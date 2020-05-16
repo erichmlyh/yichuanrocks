@@ -1,18 +1,18 @@
 <!--
  * @Description: Mobile.vue
  * @Author: 李洋华
- * @Date: 2020-05-14 17: 33
+ * @Date: 2020-05-16 15: 03
  -->
 
 <template>
-  <div class="news">
-    news
+  <div class="partners">
+    partners
   </div>
 </template>
 
 <script>
 export default {
- name: 'MobileNews',
+ name: 'Mobile',
   data() {
     return {
 
