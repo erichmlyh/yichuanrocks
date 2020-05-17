@@ -7,22 +7,32 @@
 <template>
   <div class="news">
     <Title :mobile="true" en="News" zh="川衣咨询"></Title>
+    <Item v-for="(item, index) in configs" :key="index" v-bind="item"></Item>
   </div>
 </template>
 
 <script>
+import Item from "./components/MobileItem";
 import Title from "../Title";
+
+import configs from "./configs";
 
 export default {
   name: "MobileNews",
   data() {
-    return {};
+    return {
+      configs,
+    };
   },
   props: {},
-  components: { Title },
+  components: { Title, Item },
   mounted() {},
   methods: {},
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="css">
+.news {
+  padding: 0 25px;
+}
+</style>

@@ -6,7 +6,7 @@
 
 <template>
   <div class="footer">
-    <div class="footer__content">
+    <div class="footer__content" :class="{'footer__content--mobile':mobile}">
       <img class="footer__img" src="@/assets/logow.png" width="130" />
       <p class="footer__text footer__text--first">
         <a href="/" class="">衣川文化（北京）有限公司</a>
@@ -29,7 +29,9 @@ export default {
   data() {
     return {};
   },
-  props: {},
+  props: {
+    mobile: Boolean
+  },
   components: {},
   mounted() {},
   methods: {},
@@ -39,29 +41,38 @@ export default {
 <style scoped lang="css">
 .footer {
   width: 100%;
-  background: #000;
   padding: 20px 0 40px 0;
+
+  background: #000;
 }
 .footer__img {
 }
 .footer__content {
-  margin: 0 auto;
   display: flex;
+  align-items: center;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: center;
+
+  margin: 0 auto;
+}
+.footer__content--mobile {
+  transform: scale(0.9);
+  transform-origin: center;
 }
 .footer__text a {
   color: #e0e0e0;
+
   font-size: 12px;
+
   text-decoration-line: none;
 }
 .footer__text a + a {
     margin-left: 25px;
 }
 .footer__text--first {
-    padding-top: 10px;
     margin: 10px 0 5px 0;
+    padding-top: 10px;
+
     border-top: 1px solid #a0a0a0;
 }
 </style>
