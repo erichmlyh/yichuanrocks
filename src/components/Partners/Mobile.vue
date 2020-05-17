@@ -5,7 +5,7 @@
  -->
 
 <template>
-  <div class="partners">
+  <div class="partners" id="partners">
     <Title
       class="partners-title"
       :mobile="true"

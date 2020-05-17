@@ -5,14 +5,24 @@
  -->
 
 <template>
-  <div class="introduction" id="introduction">
+  <div
+    :class="mobile ? 'mobile-introduction' : 'pc-introduction'"
+    id="introduction"
+  >
     <Title :mobile="mobile" en="Introduction" zh="公司简介"></Title>
-    <el-tabs >
-      <el-tab-pane label="衣川文化">
-        衣川文化（北京）有限公司成立于2015年8月，是一家专注于男士文化、时尚、生活的传媒公司，也是行业领先的原创内容生产者。旗下有众多知名自媒体品牌，内容阅读量过亿，粉丝超过百万。公司成立以来，以新媒体为主导媒介，深耕男士文化领域，同时与众多知名品牌合作，打造了一系列拥有广泛传播的系列男性文化内容。
-      </el-tab-pane>
-      <el-tab-pane label="业务简介">
-        衣川文化拥有丰富的内容创作经验和一流的内容创作团队，为客户量身定制的原创内容在网络上多次引发广泛传播。同时在多个内容平台为客户提供一体化的整合营销方案。针对文字、视频、线下活动等不同领域，我们都有成熟的营销策略和配套服务。
+    <el-tabs>
+      <el-tab-pane
+        v-for="(item, index) in configs"
+        :key="index"
+        :label="item.title"
+      >
+        <p
+          class="introduction-content"
+          v-for="(content, index) in item.contentList"
+          :key="index"
+        >
+          {{ content }}
+        </p>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -21,13 +31,17 @@
 <script>
 import Title from "../Title";
 
+import configs from "./configs";
+
 export default {
-  name: "Introduction",
+  name: "PcIntroduction",
   data() {
-    return {};
+    return {
+      configs,
+    };
   },
   props: {
-    mobile: Boolean
+    mobile: Boolean,
   },
   components: {
     Title,
@@ -38,30 +52,10 @@ export default {
 </script>
 
 <style>
-.introduction {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.el-tabs__nav-scroll {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-}
-.el-tabs__content {
-  width: 70%;
-  margin: 0 auto;
+@import "./pc.css";
+@import "./mobile.css";
 
-  font-size:14px;
-  line-height: 28px;
-}
-.introduction .el-tabs__item.is-active {
-  color: #a0a0a0;
-}
-.introduction .el-tabs__item:hover {
-  color: #a0a0a0;
-}
-.introduction .el-tabs__active-bar {
-  background-color: #000;
+.introduction-content {
+    margin-bottom: 10px;
 }
 </style>

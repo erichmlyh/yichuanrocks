@@ -1,0 +1,26 @@
+.pc-introduction {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pc-introduction .el-tabs__nav-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.pc-introduction .el-tabs__content {
+  margin: 0 auto;
+  padding: 0 40px;
+
+  font-size: 14px;
+  line-height: 28px;
+}
+.pc-introduction .el-tabs__item.is-active {
+  color: #a0a0a0;
+}
+.pc-introduction .el-tabs__item:hover {
+  color: #a0a0a0;
+}
+.pc-introduction .el-tabs__active-bar {
+  background-color: #000;
+}

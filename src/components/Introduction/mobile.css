@@ -1,0 +1,14 @@
+.mobile-introduction {
+    padding: 0 25px;
+}
+.mobile-introduction .el-tabs__nav-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.mobile-introduction .el-tabs__content {
+  margin: 0 auto;
+
+  font-size: 14px;
+  line-height: 28px;
+}
