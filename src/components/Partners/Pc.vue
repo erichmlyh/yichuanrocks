@@ -5,7 +5,7 @@
  -->
 
 <template>
-  <div class="partners" id="partners">
+  <div class="pc-partners" id="partners">
     <Title class="partners-title" en="Partners" zh="合作伙伴"></Title>
     <div class="partners-swiper__container">
       <swiper class="partners-swiper" ref="mySwiper" :options="swiperOptions">
@@ -36,8 +36,8 @@ export default {
       swiperOptions: {
         direction: "vertical",
         navigation: {
-          nextEl: ".partners .partners-pre",
-          prevEl: ".partners .partners-next",
+          nextEl: ".pc-partners .partners-pre",
+          prevEl: ".pc-partners .partners-next",
         },
       },
     };
@@ -50,8 +50,7 @@ export default {
 </script>
 
 <style>
-
-.partners .partners-title {
+.pc-partners .partners-title {
   margin-bottom: 100px;
 }
 .partners-swiper__container {

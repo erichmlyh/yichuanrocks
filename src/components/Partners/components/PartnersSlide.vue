@@ -8,7 +8,7 @@
   <div class="partners-slide" v-if="show">
     <el-row>
       <!-- left -->
-      <el-col :span="8">
+      <el-col :xs="24" :span="8">
         <el-row>
           <el-col :span="12">
             <div class="partners-slide__square">
@@ -28,7 +28,7 @@
         </el-row>
       </el-col>
       <!-- middle -->
-      <el-col :span="8">
+      <el-col :xs="24" :span="8">
         <el-row>
           <el-col :span="12">
             <div class="partners-slide__double">
@@ -43,7 +43,7 @@
         </el-row>
       </el-col>
       <!-- right -->
-      <el-col :span="8">
+      <el-col :xs="24" :span="8">
         <el-row>
           <div class="partners-slide__half">
             <PartnerImage v-bind="options[5]"></PartnerImage>
@@ -96,7 +96,6 @@ export default {
 <style scoped lang="css">
 .partners-slide {
   width: 100%;
-  height: 33.33vw;
 }
 .partners-slide__square {
   position: relative;
