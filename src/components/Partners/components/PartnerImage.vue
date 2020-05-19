@@ -21,7 +21,7 @@
         :class="
           show ? 'partner-image__logo--show' : 'partner-image__logo--hide'
         "
-        :src="logo"
+        v-bind="logo"
       />
     </div>
   </div>
@@ -37,7 +37,10 @@ export default {
   },
   props: {
     src: String,
-    logo: String,
+    logo: {
+      type: Object,
+      default: () => ({})
+    },
     url: String,
   },
   methods: {
@@ -61,8 +64,9 @@ export default {
 
   cursor: pointer;
   transition: all 0.5s;
+  /* background: rgba(100, 100, 100, 0.7); */
 
-  background: rgba(100, 100, 100, 0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 .partner-image__mask--hide {
   opacity: 0;

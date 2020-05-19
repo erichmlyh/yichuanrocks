@@ -57,5 +57,7 @@ export default {
 
 .introduction-content {
     margin-bottom: 10px;
+
+    color: #666;
 }
 </style>

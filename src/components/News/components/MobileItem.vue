@@ -75,12 +75,14 @@ export default {
 .mobile-item__title {
   margin-bottom: 8px;
 
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 36px;
+  line-height: 24px;
 }
 .mobile-item__text {
-  font-size: 16px;
+  color: #666;
+
+  font-size: 14px;
   line-height: 24px;
 }
 </style>

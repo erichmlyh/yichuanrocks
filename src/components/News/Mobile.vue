@@ -6,7 +6,7 @@
 
 <template>
   <div class="news" id="news">
-    <Title :mobile="true" en="News" zh="川衣咨询"></Title>
+    <Title :mobile="true" en="News" zh="川衣资讯"></Title>
     <Item v-for="(item, index) in configs" :key="index" v-bind="item"></Item>
   </div>
 </template>

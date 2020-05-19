@@ -2,47 +2,71 @@ import h from "./imgs/h.jpg";
 import s from "./imgs/s.jpg";
 import w from "./imgs/w.jpg";
 
-import logo from "./imgs/parternerlogo.png";
+import url from "./imgs/parternerlogo.png";
 
 const slide = [
   {
     src: s,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: s,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: w,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: h,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: h,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: w,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: s,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
   {
     src: s,
-    logo,
+    logo: {
+      src: url,
+      width: 55
+    },
     url: "https://www.baidu.com",
   },
 ];

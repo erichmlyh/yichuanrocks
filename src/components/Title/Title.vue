@@ -54,6 +54,7 @@ export default {
 
 .title--mobile .title__zh {
   font-size: 24px;
+  font-weight: 300;
   line-height: 24px;
 }
 </style>

@@ -29,23 +29,27 @@ export default {
 <style scoped lang="css">
 .contact-item {
   display: flex;
+  align-items: center;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: center;
+
   margin-bottom: 30px;
 }
 .contact-item__img {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
 }
 .contact-item__name {
+  margin: 10px 0 10px 0;
+
+  color: #000;
+
   font-size: 16px;
   font-weight: bold;
-  color: #000;
-  margin: 10px 0 10px 0
 }
 .contact-item__deital {
+  color: #999;
+
   font-size: 12px;
-  color: #a0a0a0;
 }
 </style>

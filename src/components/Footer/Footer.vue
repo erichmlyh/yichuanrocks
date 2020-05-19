@@ -56,7 +56,7 @@ export default {
   margin: 0 auto;
 }
 .footer__content--mobile {
-  transform: scale(0.9);
+  transform: scale(0.85);
   transform-origin: center;
 }
 .footer__text a {

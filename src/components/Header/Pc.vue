@@ -9,7 +9,7 @@
     <a href="#" class="header__ancher" v-scroll-to="'#introduction'"
       >公司介绍</a
     >
-    <a href="#" class="header__ancher" v-scroll-to="'#news'">公司咨询</a>
+    <a href="#" class="header__ancher" v-scroll-to="'#news'">公司资讯</a>
     <img class="header__img" src="@/assets/logow.png" width="70" />
     <a href="#" class="header__ancher" v-scroll-to="'#partners'">合作伙伴</a>
     <a href="#" class="header__ancher" v-scroll-to="'#contact'">联系我们</a>
