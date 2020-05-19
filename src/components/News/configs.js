@@ -10,7 +10,7 @@ export default [
       "极大改变了办公环境",
       "2017.08.01",
     ],
-    images: [news1, news2, news1, news2, news1],
+    images: [news1],
   },
   {
     src: news2,
@@ -20,7 +20,7 @@ export default [
       "极大改变了办公环境",
       "2017.08.01",
     ],
-    images: [news1, news2, news1, news2, news1],
+    images: [news1],
   },
   {
     src: news1,
@@ -30,7 +30,7 @@ export default [
       "极大改变了办公环境",
       "2017.08.01",
     ],
-    images: [news1, news2, news1, news2, news1],
+    images: [news1],
   },
   {
     src: news2,
@@ -40,7 +40,7 @@ export default [
       "极大改变了办公环境",
       "2017.08.01",
     ],
-    images: [news1, news2, news1, news2, news1],
+    images: [news1],
   },
   {
     src: news1,
@@ -50,6 +50,6 @@ export default [
       "极大改变了办公环境",
       "2017.08.01",
     ],
-    images: [news1, news2, news1, news2, news1],
+    images: [news1],
   },
 ];

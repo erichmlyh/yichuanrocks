@@ -71,4 +71,4 @@ const slide = [
   },
 ];
 
-export default [slide, slide, slide, slide];
+export default [slide, slide];

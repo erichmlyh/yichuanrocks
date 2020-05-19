@@ -5,12 +5,13 @@
       ref="el-image-viewer__wrapper"
       class="el-image-viewer__wrapper"
       :style="{ 'z-index': zIndex }"
+      @click="hide"
     >
-      <div class="el-image-viewer__mask" @click="hide"></div>
+      <div class="el-image-viewer__mask"></div>
       <!-- CLOSE -->
-      <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
+      <!-- <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
         <i class="el-icon-circle-close"></i>
-      </span>
+      </span> -->
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
@@ -29,7 +30,7 @@
         </span>
       </template>
       <!-- ACTIONS -->
-      <div class="el-image-viewer__btn el-image-viewer__actions">
+      <!-- <div class="el-image-viewer__btn el-image-viewer__actions">
         <div class="el-image-viewer__actions__inner">
           <i class="el-icon-zoom-out" @click="handleActions('zoomOut')"></i>
           <i class="el-icon-zoom-in" @click="handleActions('zoomIn')"></i>
@@ -45,7 +46,7 @@
             @click="handleActions('clocelise')"
           ></i>
         </div>
-      </div>
+      </div> -->
       <!-- CANVAS -->
       <div class="el-image-viewer__canvas">
         <template v-for="(url, i) in urlList">
@@ -321,5 +322,8 @@ export default {
 <style lang="css">
     .el-icon-circle-close:before {
         color:#fff;
+    }
+    .el-image-viewer__mask {
+      opacity: 0.8 !important;
     }
 </style>
