@@ -11,7 +11,7 @@
     @mouseleave="showTip = false"
     @click="handleClick"
   >
-    <el-image class="full" :src="src" fit="cover"></el-image>
+    <el-image class="full cursor" :src="src" fit="cover"></el-image>
     <ImageViewer
       v-dom-portal
       v-show="showViewer"

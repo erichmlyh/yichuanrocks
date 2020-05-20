@@ -32,15 +32,15 @@ export default {
   text-align: center;
 }
 .title__en {
-  font-family: "HelveticaNeue";
+  /* font-family: "HelveticaNeue"; */
   font-size: 60px;
   font-weight: bold;
   line-height: 60px;
 }
 .title__zh {
   margin-top: 6px;
+  /* font-family: "HelveticaNeue"; */
 
-  font-family: "HelveticaNeue";
   font-size: 32px;
   line-height: 32px;
 }

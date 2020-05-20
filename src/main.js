@@ -7,8 +7,6 @@ import { Row, Col, Tabs, TabPane, Image, Card } from "element-ui";
 
 import App from "./App.vue";
 
-import "element-ui/lib/theme-chalk/index.css";
-import "element-ui/lib/theme-chalk/display.css";
 import "swiper/css/swiper.css";
 import './reset.css'
 

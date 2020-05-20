@@ -30,7 +30,7 @@
         </span>
       </template>
       <!-- ACTIONS -->
-      <!-- <div class="el-image-viewer__btn el-image-viewer__actions">
+      <div class="el-image-viewer__btn el-image-viewer__actions">
         <div class="el-image-viewer__actions__inner">
           <i class="el-icon-zoom-out" @click="handleActions('zoomOut')"></i>
           <i class="el-icon-zoom-in" @click="handleActions('zoomIn')"></i>
@@ -46,7 +46,7 @@
             @click="handleActions('clocelise')"
           ></i>
         </div>
-      </div> -->
+      </div>
       <!-- CANVAS -->
       <div class="el-image-viewer__canvas">
         <template v-for="(url, i) in urlList">
@@ -324,6 +324,6 @@ export default {
         color:#fff;
     }
     .el-image-viewer__mask {
-      opacity: 0.8 !important;
+      opacity: 0.9 !important;
     }
 </style>

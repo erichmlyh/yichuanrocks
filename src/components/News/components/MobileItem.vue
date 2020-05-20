@@ -7,7 +7,7 @@
 <template>
   <div class="mobile-item">
     <el-image
-      class="full"
+      class="full cursor"
       :src="src"
       fit="cover"
       @click="handleClick"
