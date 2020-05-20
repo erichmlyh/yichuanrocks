@@ -5,13 +5,12 @@
       ref="el-image-viewer__wrapper"
       class="el-image-viewer__wrapper"
       :style="{ 'z-index': zIndex }"
-      @click="hide"
     >
-      <div class="el-image-viewer__mask"></div>
+      <div class="el-image-viewer__mask" @click="hide"></div>
       <!-- CLOSE -->
-      <!-- <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
+      <span class="el-image-viewer__btn el-image-viewer__close" @click="hide">
         <i class="el-icon-circle-close"></i>
-      </span> -->
+      </span>
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
@@ -321,9 +320,13 @@ export default {
 
 <style lang="css">
     .el-icon-circle-close:before {
-        color:#fff;
-    }
-    .el-image-viewer__mask {
-      opacity: 0.9 !important;
-    }
+            color:#fff;
+        }
+        .el-image-viewer__mask {
+          top: -2px !important;
+
+          height: 200% !important;
+
+          opacity: 0.9 !important;
+        }
 </style>
