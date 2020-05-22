@@ -323,10 +323,6 @@ export default {
             color:#fff;
         }
         .el-image-viewer__mask {
-          top: -2px !important;
-
-          height: 200% !important;
-
           opacity: 0.9 !important;
         }
 </style>

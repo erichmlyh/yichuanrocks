@@ -4,9 +4,10 @@ import VideoBackground from "vue-responsive-video-background-player";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import DomPortal from "vue-dom-portal";
 import { Row, Col, Tabs, TabPane, Image, Card } from "element-ui";
-
+import VideoPlayer from "vue-video-player";
 import App from "./App.vue";
 
+import "video.js/dist/video-js.css";
 import "swiper/css/swiper.css";
 import './reset.css'
 
@@ -24,6 +25,7 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true
 });
+Vue.use(VideoPlayer);
 Vue.component("video-background", VideoBackground);
 Vue.use(DomPortal);
 Vue.use(Row);
