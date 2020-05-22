@@ -5,8 +5,8 @@ export const isFirefox = function() {
 export function rafThrottle(fn) {
   let locked = false;
   return function() {
-      const args = Array.prototype.slice.call(arguments);
-      if (locked) return;
+    const args = Array.prototype.slice.call(arguments);
+    if (locked) return;
     locked = true;
     window.requestAnimationFrame(() => {
       fn.apply(this, args);
