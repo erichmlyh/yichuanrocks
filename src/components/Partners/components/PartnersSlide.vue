@@ -12,18 +12,18 @@
         <el-row>
           <el-col :span="12">
             <div class="partners-slide__square">
-              <PartnerImage v-bind="options[0]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[0]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
           <el-col :span="12">
             <div class="partners-slide__square">
-              <PartnerImage v-bind="options[1]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[1]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
         </el-row>
         <el-row>
           <div class="partners-slide__half">
-            <PartnerImage v-bind="options[2]" :mobile="mobile"></PartnerImage>
+            <PartnerImage v-bind="options[2]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
           </div>
         </el-row>
       </el-col>
@@ -32,12 +32,12 @@
         <el-row>
           <el-col :span="12">
             <div class="partners-slide__double">
-              <PartnerImage v-bind="options[3]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[3]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
           <el-col :span="12">
             <div class="partners-slide__double">
-              <PartnerImage v-bind="options[4]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[4]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
         </el-row>
@@ -46,18 +46,18 @@
       <el-col :xs="24" :span="8">
         <el-row>
           <div class="partners-slide__half">
-            <PartnerImage v-bind="options[5]" :mobile="mobile"></PartnerImage>
+            <PartnerImage v-bind="options[5]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
           </div>
         </el-row>
         <el-row>
           <el-col :span="12">
             <div class="partners-slide__square">
-              <PartnerImage v-bind="options[6]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[6]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
           <el-col :span="12">
             <div class="partners-slide__square">
-              <PartnerImage v-bind="options[7]" :mobile="mobile"></PartnerImage>
+              <PartnerImage v-bind="options[7]" :mobile="mobile" :clientWidth="clientWidth"></PartnerImage>
             </div>
           </el-col>
         </el-row>
@@ -72,7 +72,9 @@ import PartnerImage from "./PartnerImage";
 export default {
   name: "PartnersSlide",
   data() {
-    return {};
+    return {
+      clientWidth: document.documentElement.clientWidth
+    };
   },
   props: {
     options: {
@@ -88,6 +90,11 @@ export default {
   },
   components: {
     PartnerImage,
+  },
+  beforeCreate() {
+    window.addEventListener("resize", () => {
+      this.clientWidth = document.documentElement.clientWidth
+    });
   },
   mounted() {},
   methods: {},

@@ -10,7 +10,7 @@
       >公司介绍</a
     >
     <a href="#" class="header__ancher" v-scroll-to="'#news'">公司资讯</a>
-    <img class="header__img" src="@/assets/logow.png" width="70" />
+    <img class="header__img" src="@/assets/logow.png" />
     <a href="#" class="header__ancher" v-scroll-to="'#partners'">合作伙伴</a>
     <a href="#" class="header__ancher" v-scroll-to="'#contact'">联系我们</a>
   </div>
@@ -22,15 +22,15 @@ export default {
   name: "PcHeader",
   data() {
     return {
-      rate: 0
+      rate: 0,
     };
   },
   computed: {
     headerStyle() {
       return {
-        background: `rgba(0,0,0,${this.rate})`
-      }
-    }
+        background: `rgba(0,0,0,${this.rate})`,
+      };
+    },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
@@ -43,7 +43,7 @@ export default {
       const clientHeight = html.clientHeight;
       const { y: scrollTop = 0 } = html.getBoundingClientRect();
 
-      this.rate =  Math.min(Math.abs(scrollTop/clientHeight),1)
+      this.rate = Math.min(Math.abs(scrollTop / clientHeight), 1);
     },
   },
 };
@@ -75,6 +75,23 @@ export default {
   margin-left: 40px;
 }
 .header__img {
+  width: 75px;
   margin: 0 40px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .header__ancher {
+    font-size: 16px;
+  }
+  .header__img {
+    width: 85px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .header__ancher {
+    font-size: 18px;
+  }
+  .header__img {
+    width: 100px;
+  }
 }
 </style>

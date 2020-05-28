@@ -24,6 +24,11 @@
           show ? 'partner-image__logo--show' : 'partner-image__logo--hide'
         "
         v-bind="logo"
+        :width="
+          logo.width
+            ? Math.round((Math.max(1200,clientWidth) / 1920) * logo.width)
+            : logo.width
+        "
       />
     </div>
   </div>
@@ -41,15 +46,19 @@ export default {
     src: String,
     logo: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     url: String,
-    mobile: Boolean
+    mobile: Boolean,
+    clientWidth: {
+      type: Number,
+      default: 1920
+    }
   },
   watch: {
     mobile(val) {
       this.show = !val;
-    }
+    },
   },
   methods: {
     handleClick() {
@@ -65,10 +74,11 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-user-select:none; 
+
+  -webkit-user-select: none;
 }
 .partner-image * {
-  -webkit-user-select:none; 
+  -webkit-user-select: none;
 }
 .partner-image__mask {
   position: absolute;

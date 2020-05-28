@@ -9,7 +9,7 @@ const slide = [
     src: s,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -17,7 +17,7 @@ const slide = [
     src: s,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -25,7 +25,7 @@ const slide = [
     src: w,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -33,7 +33,7 @@ const slide = [
     src: h,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -41,7 +41,7 @@ const slide = [
     src: h,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -49,7 +49,7 @@ const slide = [
     src: w,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -57,7 +57,7 @@ const slide = [
     src: s,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
@@ -65,7 +65,7 @@ const slide = [
     src: s,
     logo: {
       src: url,
-      width: 55
+      width: 110
     },
     url: "https://www.baidu.com",
   },
