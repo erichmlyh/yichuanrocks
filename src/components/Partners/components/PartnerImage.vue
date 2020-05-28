@@ -64,6 +64,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-user-select:none; 
+}
+.partner-image * {
+  -webkit-user-select:none; 
 }
 .partner-image__mask {
   position: absolute;
