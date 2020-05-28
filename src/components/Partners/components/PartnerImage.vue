@@ -53,6 +53,7 @@ export default {
   },
   methods: {
     handleClick() {
+      this.show = false;
       window.open(this.url);
     },
   },

@@ -35,6 +35,7 @@ export default {
       configs,
       swiperOptions: {
         direction: "vertical",
+        spaceBetween: 10,
         navigation: {
           nextEl: ".pc-partners .partners-pre",
           prevEl: ".pc-partners .partners-next",
