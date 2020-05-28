@@ -33,16 +33,19 @@ export default {
           src: phone,
           name: "商务合作请致电",
           detail: "+86 18810476747",
+          href: "tel://+86 18810476747"
         },
         {
           src: email,
           name: "邮箱",
           detail: "market@yichuan.rocks",
+          href: 'mailto:market@yichuan.rocks'
         },
         {
           src: join,
           name: "加入我们请联系",
           detail: "hr@yichuan.rocks",
+          href: 'mailto:hr@yichuan.rocks'
         },
       ],
     };

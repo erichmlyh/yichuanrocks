@@ -16,6 +16,7 @@
       v-for="(slide, index) in configs"
       :key="index"
       :options="slide"
+      mobile
     ></PartnersSlide>
   </div>
 </template>

@@ -10,6 +10,8 @@
     @mouseover="show = true"
     @mouseleave="show = false"
     @click="handleClick"
+    @touchstart="show = true"
+    @touchend="show = false"
   >
     <el-image class="full" :src="src" fit="cover"></el-image>
     <div
@@ -32,7 +34,7 @@ export default {
   name: "PartnerImage",
   data() {
     return {
-      show: true,
+      show: !this.mobile,
     };
   },
   props: {
@@ -42,6 +44,12 @@ export default {
       default: () => ({})
     },
     url: String,
+    mobile: Boolean
+  },
+  watch: {
+    mobile(val) {
+      this.show = !val;
+    }
   },
   methods: {
     handleClick() {

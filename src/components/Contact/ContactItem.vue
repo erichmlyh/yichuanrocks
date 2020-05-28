@@ -8,7 +8,7 @@
   <div class="contact-item">
     <img class="contact-item__img" :src="src" alt="" srcset="" />
     <p class="contact-item__name">{{ name }}</p>
-    <p class="contact-item__deital">{{ detail }}</p>
+    <a :href="href" class="contact-item__detail">{{ detail }}</a>
   </div>
 </template>
 
@@ -19,6 +19,10 @@ export default {
     src: String,
     name: String,
     detail: String,
+    href: {
+      type: String,
+      default: 'javacript: void 0;'
+    }
   },
   components: {},
   mounted() {},
@@ -47,9 +51,10 @@ export default {
   font-size: 16px;
   font-weight: bold;
 }
-.contact-item__deital {
+.contact-item__detail {
   color: #999;
 
   font-size: 12px;
+  text-decoration: none;
 }
 </style>
