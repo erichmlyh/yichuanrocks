@@ -6,7 +6,7 @@
 
 <template>
   <div class="news" id="news">
-    <Title en="News" zh="川衣资讯"></Title>
+    <Title en="News" zh="公司资讯"></Title>
     <div class="news-swiper__container">
       <swiper class="news-swiper" ref="mySwiper" :options="swiperOptions">
         <swiper-slide

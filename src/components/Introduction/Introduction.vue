@@ -9,7 +9,7 @@
     :class="mobile ? 'mobile-introduction' : 'pc-introduction'"
     id="introduction"
   >
-    <Title :mobile="mobile" en="Introduction" zh="公司简介"></Title>
+    <Title :mobile="mobile" en="Introduction" zh="公司介绍"></Title>
     <el-tabs>
       <el-tab-pane
         v-for="(item, index) in configs"

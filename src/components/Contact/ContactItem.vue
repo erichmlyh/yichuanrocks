@@ -37,6 +37,7 @@ export default {
   flex-flow: column nowrap;
   justify-content: flex-start;
 
+  min-width: 250px;
   margin-bottom: 30px;
 }
 .contact-item__img {
@@ -52,9 +53,11 @@ export default {
   font-weight: bold;
 }
 .contact-item__detail {
+  white-space: nowrap;
+  text-decoration: none;
+
   color: #999;
 
   font-size: 12px;
-  text-decoration: none;
 }
 </style>
