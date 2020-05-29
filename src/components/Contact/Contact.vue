@@ -7,7 +7,7 @@
 <template>
   <div class="contact" id="contact">
     <Title :mobile="mobile" en="Contact us" zh="联系我们"></Title>
-    <div :class="{ contact__row: !mobile }">
+    <div :class="mobile ? 'contact__wrap--mobile' : 'contact__wrap--pc'">
       <ContactItem
         v-for="(item, index) in configs"
         :key="index"
@@ -66,12 +66,18 @@ export default {
 </script>
 
 <style>
-.contact__row {
+.contact__wrap--pc {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
   justify-content: center;
 
   margin: 40px 0 20px 0;
+}
+.contact__wrap--mobile {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 </style>

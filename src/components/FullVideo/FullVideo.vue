@@ -70,8 +70,9 @@ export default {
   max-height: 56vw;
 }
 .video-js .vjs-big-play-button {
-  top: 50%;
-  left: 50%;
+  top: 50% !important;
+  left: 50% !important;
+
   transform: translate(-50%,-50%);
 }
 </style>
