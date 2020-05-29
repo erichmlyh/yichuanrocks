@@ -21,8 +21,8 @@ export default {
     detail: String,
     href: {
       type: String,
-      default: 'javacript: void 0;'
-    }
+      default: "javacript: void 0;",
+    },
   },
   components: {},
   mounted() {},
@@ -37,8 +37,13 @@ export default {
   flex-flow: column nowrap;
   justify-content: flex-start;
 
-  min-width: 250px;
+  width: 250px;
   margin-bottom: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .contact-item {
+    width: 320px;
+  }
 }
 .contact-item__img {
   width: 32px;
